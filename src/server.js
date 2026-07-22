@@ -3,5 +3,5 @@ import app from './app.js';
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-	console.log(`\nListening on: https://localhost:${PORT}\n`);
-})
+  console.log(`\nListening on: https://localhost:${PORT}\n`);
+});
