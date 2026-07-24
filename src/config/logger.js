@@ -3,9 +3,9 @@ import winston from 'winston';
 const logger = winston.createLogger({
   level: process.env.LOG_LEVEL || 'info',
   format: winston.format.combine(
-	winston.format.timestamp(),
-	winston.format.errors({ stack: true }),
-	winston.format.json()
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()
   ),
   defaultMeta: { service: 'acquisitions-api' },
   transports: [
@@ -17,10 +17,10 @@ const logger = winston.createLogger({
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
     format: winston.format.combine(
-	winston.format.colorize(),
-	winston.format.simple(),
+      winston.format.colorize(),
+      winston.format.simple(),
     )
   }));
 }
 
-export default logger
+export default logger;
